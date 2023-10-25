@@ -31,5 +31,6 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_MODULE := vncpasswd
 LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
 
 include $(BUILD_EXECUTABLE)

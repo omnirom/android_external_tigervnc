@@ -1,0 +1,38 @@
+cc_binary {
+    name: "vncpasswd",
+
+    srcs: ["vncpasswd.cxx"],
+
+    cflags: [
+        "-Ofast",
+        "-Wall",
+        "-Wformat=2",
+        "-DNDEBUG",
+        "-UNDEBUG",
+    ] + ["-Wno-unused-parameter"],
+
+    cppflags: [
+        "-std=c++11",
+        "-fexceptions",
+        "-frtti",
+    ],
+
+    shared_libs: [
+        "libbinder",
+        "libcrypto",
+        "libcutils",
+        "libgui",
+        "libjpeg",
+        "libssl",
+        "libui",
+        "libutils",
+        "libz",
+    ],
+
+    static_libs: ["libtigervnc"],
+
+    include_dirs: ["external/tigervnc/common"],
+
+    system_ext_specific: true,
+
+}
